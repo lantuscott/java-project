@@ -1,3 +1,12 @@
+properties([pipelineTriggers([githubPush()])])
+
+node('linux'){
+    stage('Build'){
+        git 'https://github.com/lantuscott/java-project.git'
+        sh "ant"
+    }
+}
+
 pipeline {
     agent any
 
