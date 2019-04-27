@@ -28,7 +28,7 @@ pipeline {
         }
         stage('Report') {
             steps {
-                echo 'Reporting....'
+                sh 'aws cloudformation describestack-resources --region us-east-1 --stack-name jenkins'
             }
         }
     }
