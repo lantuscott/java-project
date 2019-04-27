@@ -15,11 +15,6 @@ pipeline {
             steps {
                 sh 'ant -f test.xml -v'
             }
-            post {
-                always {
-                   junit 'reports/result.xml' 
-                }
-            }
         }
         stage('Build') {
             steps {
