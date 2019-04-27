@@ -23,7 +23,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'aws s3 cp /workspace/java-pipeline/reports/* s3://seis665ust-mfarinha'
+                sh 'aws s3 cp /workspace/java-pipeline/dist/* s3://seis665ust-mfarinha'
             }
         }
         stage('Report') {
